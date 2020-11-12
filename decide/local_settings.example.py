@@ -23,7 +23,7 @@ APIS = {
     'voting': 'http://10.5.0.1:8000',
 }
 
-BASEURL = 'localhost:8000'
+BASEURL = 'localhost:8060'
 
 DATABASES = {
     'default': {
