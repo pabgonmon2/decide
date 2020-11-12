@@ -10,7 +10,6 @@ MODULES = [
     'postproc',
     'store',
     'visualizer',
-    'voting',
 ]
 
 APIS = {
