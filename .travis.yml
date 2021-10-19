@@ -6,7 +6,7 @@ addons:
   postgresql: "9.4"
 before_script:
   - psql -U postgres -c "create user decide password 'decide'"
-  - psql -U postgres -c "create database test_decide owner decide"
+  - psql -U postgres -c "create database decide owner decide"
   - psql -U postgres -c "ALTER USER decide CREATEDB"
 language: python
 python:
@@ -20,8 +20,3 @@ script:
   - coverage run --branch --source=. ./manage.py test census 
   - coverage xml
   - python-codacy-coverage -r coverage.xml
-deploy:
-  provider: heroku
-  app: egc-app-decide3
-  strategy: git
-  api_key: $HEROKU_AUTH_TOKEN
