@@ -20,7 +20,7 @@ class GetUserView(APIView):
         tk = get_object_or_404(Token, key=key)
         return Response(UserSerializer(tk.user, many=False).data)
 
-
+#dsfaf
 class LogoutView(APIView):
     def post(self, request):
         key = request.data.get('token', '')
