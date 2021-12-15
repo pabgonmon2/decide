@@ -4,6 +4,9 @@ on: [push]
 
 jobs:
   build:
+    strategy:
+        matrix:
+          pyversion: ['3.5','3.8']
     runs-on: ubuntu-latest
 
     services:
